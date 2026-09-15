@@ -1,0 +1,29 @@
+.header-centralizado {
+    text-align: center;
+    padding: 20px 0px;
+    background-color: #f4f4f4;
+    border-bottom: 2px solid #e2e8f0;
+    font-family: sans-serif;
+}
+
+.header-centralizado h1 {
+    margin-bottom: 10px;
+    color: #1f2937;
+}
+
+.header-centralizado nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.header-centralizado nav a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Regra Extra */
+.header-centralizado nav a:hover {
+    opacity: 0.6;
+}
