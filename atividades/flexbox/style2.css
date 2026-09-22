@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaço entre cada linha */
+    font-family: sans-serif;
+}
+
+/* Container Flexbox principal */
+.container {
+    display: flex;
+    gap: 10px; /* Espaço entre os blocos da mesma linha */
+}
+
+/* Estilo visual dos blocos do quadro */
+.container > div {
+    background-color: #3f9f41;
+    border: 2px solid #000000;
+    padding: 50px 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Alinhamento para a linha com 3 blocos de 30% */
+.centralizado {
+    justify-content: center;
+}
+
+/* Sistema de Colunas em Percentagem */
+.col-30 {
+    flex: 0 0 calc(30% - 7px); /* Compensação do gap */
+}
+
+.col-50 {
+    flex: 0 0 calc(50% - 5px);
+}
+
+.col-70 {
+    flex: 0 0 calc(70% - 7px);
+}
+
+.col-100 {
+    flex: 0 0 100%;
+}
