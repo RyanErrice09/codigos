@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Página Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="#">Minha Página</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Quem somos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Serviços</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contato</a></li>
+                    </ul>
+                    <form class="d-flex ms-3">
+                        <input class="form-control me-2" type="search" placeholder="Procurar">
+                        <button class="btn btn-outline-light" type="submit">Procurar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="carrosel">
+            <div id="meuCarrossel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://picsum.photos/1920/400?random=1" class="d-block w-100" alt="Banner 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://picsum.photos/1920/400?random=2" class="d-block w-100" alt="Banner 2">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#meuCarrossel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#meuCarrossel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Próximo</span>
+                </button>
+            </div>
+        </section>
+
+        <section id="s1" class="py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <img src="https://picsum.photos/400/300?random=3" class="img-fluid rounded" alt="Imagem 1">
+                    </div>
+                    <div class="col-md-8">
+                        <h2>Título 1</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores velit nostrum, deserunt quisquam rerum unde necessitatibus animi id doloribus amet accusamus ipsa ipsam. Facilis unde nesciunt voluptates esse recusandae ratione.</p>
+                        <button class="btn btn-primary" type="button">Saiba mais</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="s2" class="py-5 bg-light">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-8 order-2 order-md-1">
+                        <h2>Título 2</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis quia veritatis ipsam nulla laboriosam laborum, consequuntur non debitis, qui hic delectus aspernatur cum asperiores suscipit, molestiae mollitia velit eum tempore.</p>
+                        <button class="btn btn-primary btn-lg" type="button">Ação Grande</button>
+                    </div>
+                    <div class="col-md-4 order-1 order-md-2 mb-3 mb-md-0">
+                        <img src="https://picsum.photos/400/300?random=4" class="img-fluid rounded" alt="Imagem 2">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>Links Úteis</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white-50">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white-50">Sobre</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white-50">Serviços</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-md-5 offset-md-5 mb-3">
+                    <form>
+                        <h5>Assine nossa newsletter</h5>
+                        <p>Resumo mensal do que há de novo e empolgante.</p>
+                        <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                            <label for="newsletter1" class="visually-hidden">Endereço de email</label>
+                            <input id="newsletter1" type="text" class="form-control" placeholder="Endereço de email">
+                            <button class="btn btn-primary" type="button">Assinar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                <p>&copy; 2026 Todos os direitos reservados.</p>
+                <ul class="list-unstyled d-flex">
+                    <li class="ms-3"><a class="link-light" href="#"><i class="bi bi-twitter fs-4"></i></a></li>
+                    <li class="ms-3"><a class="link-light" href="#"><i class="bi bi-instagram fs-4"></i></a></li>
+                    <li class="ms-3"><a class="link-light" href="#"><i class="bi bi-facebook fs-4"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
