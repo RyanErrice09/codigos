@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movement Studios</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts (Inter) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-black: #000000;
+      --text-white: #ffffff;
+      --text-dark: #000000;
+      --blue-main: #2b45ff;
+      --cyan-light: #d4fcf9;
+      --pink-magenta: #e000ff;
+    }
+
+    body {
+      background-color: var(--bg-black);
+      color: var(--text-white);
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* HEADER & NAVBAR */
+    header {
+      background-color: #000000;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .nav-item-custom {
+      padding: 0.8rem 1.5rem;
+      border-right: 1px solid rgba(255, 255, 255, 0.2);
+      color: var(--text-white);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .nav-item-custom:hover {
+      color: #cccccc;
+    }
+
+    /* SECÇÃO HERO (FUNDO TOTAL) */
+    .hero-section {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url('Header section.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 85vh;
+      display: flex;
+      align-items: flex-end;
+      padding-bottom: 4rem;
+    }
+
+    .hero-title {
+      font-size: clamp(3.5rem, 8vw, 7.5rem);
+      font-weight: 800;
+      line-height: 0.95;
+      letter-spacing: -2px;
+      margin-bottom: 2rem;
+    }
+
+    .btn-hero {
+      background-color: var(--cyan-light);
+      color: #000000;
+      border-radius: 0;
+      padding: 0.85rem 2.2rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      display: inline-block;
+      border: none;
+      transition: opacity 0.2s ease;
+    }
+
+    .btn-hero:hover {
+      opacity: 0.9;
+      color: #000000;
+    }
+
+    /* MARQUEE BLUE */
+    .marquee-blue {
+      background-color: var(--blue-main);
+      color: #ffffff;
+      padding: 0.85rem 0;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .marquee-content {
+      display: inline-block;
+      animation: marquee 25s linear infinite;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* SECÇÕES SPLIT 50/50 COM FUNDO BRANCO */
+    .split-white-bg {
+      background-color: #ffffff;
+      color: #000000;
+      padding: 5rem 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+    }
+
+    .btn-blue-rect {
+      background-color: var(--blue-main);
+      color: #ffffff;
+      border-radius: 0;
+      padding: 0.85rem 2rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      display: inline-block;
+      border: none;
+      width: fit-content;
+      transition: opacity 0.2s ease;
+    }
+
+    .btn-blue-rect:hover {
+      color: #ffffff;
+      opacity: 0.9;
+    }
+
+    /* BANNER CTA AZUL DE INSCRIÇÃO */
+    .banner-cta-blue {
+      background-color: var(--blue-main);
+      color: #ffffff;
+      padding: 6rem 4rem;
+    }
+
+    .banner-cta-blue h2 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.25;
+      max-width: 900px;
+      margin-bottom: 2.5rem;
+    }
+
+    /* RODAPÉ CIANO / MINT */
+    .footer-cyan {
+      background-color: var(--cyan-light);
+      color: #000000;
+      padding: 5rem 4rem;
+    }
+
+    .footer-label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #333333;
+      margin-top: 1.2rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .footer-val {
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    .footer-val a {
+      color: #000000;
+      text-decoration: none;
+    }
+
+    /* BLOCOS DE BOTÕES DE AÇÃO NO RODAPÉ */
+    .footer-blocks {
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+    }
+
+    .block-btn {
+      flex: 1;
+      min-width: 250px;
+      padding: 2.5rem 3rem;
+      font-size: 1.25rem;
+      font-weight: 700;
+      text-decoration: none;
+      display: block;
+      transition: opacity 0.2s ease;
+    }
+
+    .block-btn:hover {
+      opacity: 0.9;
+    }
+
+    .block-blue {
+      background-color: var(--blue-main);
+      color: #ffffff;
+    }
+
+    .block-black {
+      background-color: #000000;
+      color: #ffffff;
+    }
+
+    .block-magenta {
+      background-color: var(--pink-magenta);
+      color: #000000;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ================= HEADER SEMÂNTICO ================= -->
+  <header>
+    <div class="container-fluid px-0">
+      <div class="d-flex justify-content-between align-items-center">
+        <nav class="d-flex align-items-center border-start border-white border-opacity-25">
+          <a href="#classes" class="nav-item-custom">Classes</a>
+          <a href="#vision" class="nav-item-custom">About</a>
+          <span class="nav-item-custom d-none d-md-inline-block text-white-50">224 Nostrand Ave, Brooklyn, NY</span>
+        </nav>
+        
+        <div class="pe-4 py-2">
+          <img src="Movement Studios.png" alt="Movement Studios." style="max-height: 28px;">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= CONTEÚDO PRINCIPAL (MAIN) ================= -->
+  <main>
+
+    <!-- SECÇÃO HERO -->
+    <section class="hero-section">
+      <div class="container-fluid px-4 px-md-5">
+        <h1 class="hero-title">Find your<br>flow.</h1>
+        <a href="#reserve" class="btn btn-hero">Reserve your spot</a>
+      </div>
+    </section>
+
+    <!-- FAIXA MARQUEE AZUL -->
+    <div class="marquee-blue">
+      <div class="marquee-content">
+        Fluid. Expressive. Powerful. Move with us! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        Masterclass Alert: Guest Choreographer Workshop This Saturday &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        New Contemporary Dance Classes Now Enrolling – Secure Your Spot &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Fluid. Expressive. Powerful. Move with us! &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        Masterclass Alert: Guest Choreographer Workshop This Saturday &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+        New Contemporary Dance Classes Now Enrolling – Secure Your Spot
+      </div>
+    </div>
+
+    <!-- SECÇÃO VISION (DIVISÃO 50/50) -->
+    <section id="vision" class="container-fluid p-0">
+      <div class="row g-0 align-items-stretch">
+        <div class="col-md-6">
+          <img src="Title container 1.png" alt="Vision" class="w-100 h-100 object-fit-cover d-block">
+        </div>
+        <div class="col-md-6">
+          <div class="split-white-bg">
+            <h3 class="fw-bold fs-3 mb-4">Who we are</h3>
+            <p class="fs-5 lh-base text-secondary mb-4">
+              At Movement Studio, we're passionate about creating a supportive and inspiring environment for dancers of all levels. Whether you're a complete beginner eager to explore the world of modern dance, a seasoned performer looking to refine your technique, or simply someone who finds joy in moving, you'll find a home here.
+            </p>
+            <a href="#about" class="btn btn-blue-rect">About us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECÇÃO CLASSES (DIVISÃO 50/50) -->
+    <section id="classes" class="container-fluid p-0">
+      <div class="row g-0 align-items-stretch">
+        <div class="col-md-6">
+          <img src="Title container 2.png" alt="Classes" class="w-100 h-100 object-fit-cover d-block">
+        </div>
+        <div class="col-md-6">
+          <div class="split-white-bg">
+            <h3 class="fw-bold fs-3 mb-4">Our Classes</h3>
+            <p class="fs-5 lh-base text-secondary mb-4">
+              Get your groove on with Hip Hop, find your rhythm in Jazz, and explore connection in Contact Improvisation. Movement Studio offers a diverse range of classes for every dancer.
+            </p>
+            <a href="#reserve" class="btn btn-blue-rect">Reserve your spot</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECÇÃO OUR FOUNDERS (DIVISÃO 50/50) -->
+    <section id="founders" class="container-fluid p-0">
+      <div class="row g-0 align-items-stretch">
+        <!-- Lado Esquerdo: Fundo Branco com Título e Citação -->
+        <div class="col-md-6 bg-white text-dark p-5 d-flex flex-column justify-content-between">
+          <div>
+            <h2 class="fw-bold display-5 mb-5">Our Founders</h2>
+          </div>
+          <div class="my-5">
+            <p class="display-6 fw-bold mb-3">"Find your flow, and dance your truth."</p>
+            <p class="fs-5 text-muted">&mdash; Sophia Bennett</p>
+          </div>
+          <div></div>
+        </div>
+        <!-- Lado Direito: Os dois cartões das fundadoras empilhados -->
+        <div class="col-md-6">
+          <img src="Founder card 1.png" alt="Sophia Bennett" class="w-100 d-block">
+          <img src="Founder card 2.png" alt="Alisa Morris" class="w-100 d-block">
+        </div>
+      </div>
+    </section>
+
+    <!-- BANNER CTA AZUL DE INSCRIÇÃO -->
+    <section class="banner-cta-blue">
+      <div class="container-fluid p-0">
+        <h2>Whether you're a beginner looking to explore expressive movement or an advanced dancer ready to refine your technique, we have classes for you!</h2>
+        <a href="#reserve" class="btn btn-hero mt-3">Reserve your spot</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER SEMÂNTICO ================= -->
+  <footer>
+    <!-- Secção Superior do Rodapé (Fundo Ciano/Mint) -->
+    <div class="footer-cyan">
+      <div class="container-fluid p-0">
+        <div class="row gy-4 align-items-start">
+          <div class="col-md-4">
+            <img src="Mov. Stu.png" alt="Mov. Stu." style="max-width: 180px;" class="img-fluid">
+          </div>
+          <div class="col-md-4">
+            <div class="footer-label">Email:</div>
+            <div class="footer-val"><a href="mailto:hello@figma.com">hello@figma.com</a></div>
+
+            <div class="footer-label">Instagram:</div>
+            <div class="footer-val"><a href="#">@figma</a></div>
+
+            <div class="footer-label">Facebook:</div>
+            <div class="footer-val"><a href="#">figma</a></div>
+          </div>
+          <div class="col-md-4">
+            <div class="footer-label">Address:</div>
+            <div class="footer-val">224 Candyland Lane, Brooklyn, NY</div>
+            <div class="footer-val">(646) 555-4567</div>
+
+            <div class="mt-4 pt-2">
+              <div class="footer-val mb-0 fw-bold">Movement Studios&copy;</div>
+              <div class="footer-val text-secondary">2025 All Rights Reserved</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bloco Inferior de 3 Botões de Ação -->
+    <div class="footer-blocks">
+      <a href="#" class="block-btn block-blue">Our Socials</a>
+      <a href="mailto:hello@figma.com" class="block-btn block-black">Email us</a>
+      <a href="#reserve" class="block-btn block-magenta">Book with us</a>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
