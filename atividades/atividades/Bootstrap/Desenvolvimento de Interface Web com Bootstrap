@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movement Studios</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f8f8;
+            color: #000;
+        }
+        
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .hero-title {
+            font-size: 8rem;
+            line-height: 0.9;
+            letter-spacing: -0.05em;
+            margin-bottom: 2rem;
+        }
+
+        .btn-custom {
+            background-color: #000;
+            color: #fff;
+            border-radius: 50px;
+            padding: 12px 30px;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.85rem;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-custom:hover {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+            background: transparent;
+            padding: 1rem 0;
+            border-top: 1px solid #000;
+            border-bottom: 1px solid #000;
+            margin-top: 4rem;
+        }
+
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 20s linear infinite;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        .founder-img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            filter: grayscale(100%);
+        }
+
+        .footer-logo {
+            font-size: 4rem;
+            line-height: 1;
+            font-weight: 600;
+        }
+
+        .footer-links a {
+            color: #000;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="py-3 border-bottom border-dark border-opacity-10">
+        <div class="container-fluid px-4">
+            <div class="d-flex justify-content-between align-items-center">
+                <nav class="d-flex gap-4">
+                    <a href="#" class="text-dark text-decoration-none">Classes</a>
+                    <a href="#" class="text-dark text-decoration-none">About</a>
+                </nav>
+                <div class="fw-bold fs-5 text-uppercase">
+                    Movement Studios.
+                </div>
+                <div class="text-end small">
+                    224 Nostrand Ave,<br>Brooklyn, NY
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="pt-5 mt-5">
+            <div class="container text-center">
+                <h1 class="hero-title font-serif">Find your<br>flow.</h1>
+                <a href="#" class="btn-custom mt-3">Reserve your spot</a>
+            </div>
+            
+            <div class="marquee-container mt-5">
+                <div class="marquee-content">
+                    Fluid. Expressive. Powerful. Move with us! Masterclass Alert: Guest Choreographer Workshop This Saturday | New Contemporary Dance Classes Now Enrolling-Secure Your Spot
+                </div>
+            </div>
+        </section>
+
+        <section id="vision" class="py-5 my-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 mb-3">
+                        <span class="text-uppercase small">Vision</span>
+                    </div>
+                    <div class="col-md-8">
+                        <h2 class="display-4 font-serif">"Find your flow, and dance your truth."</h2>
+                        <p class="mt-3">— Sophia Bennett</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-dark opacity-25">
+
+        <section id="about" class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3 class="h5">Who we are</h3>
+                    </div>
+                    <div class="col-md-8">
+                        <p class="fs-5">At Movement Studio, we're passionate about creating a supportive and inspiring environment for dancers of all levels. Whether you're a complete beginner eager to explore the world of modern dance, a seasoned performer looking to refine your technique, or simply someone who finds joy in moving, you'll find a home here.</p>
+                        <a href="#" class="text-dark fw-bold text-decoration-underline mt-3 d-inline-block">About us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-dark opacity-25">
+
+        <section id="classes" class="py-5">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-md-4">
+                        <span class="text-uppercase small">Classes</span>
+                    </div>
+                    <div class="col-md-8">
+                        <h2 class="h3 font-serif">Our Classes</h2>
+                        <p>Get your groove on with Hip Hop, find your rhythm in Jazz, and explore connection in Contact Improvisation, Movement Studio offers a diverse range of classes for every dancer.</p>
+                        <a href="#" class="btn-custom mt-2">Reserve your spot</a>
+                    </div>
+                </div>
+
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <span class="text-uppercase small">Our Founders</span>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <img src="img/sophia-bennett.jpg" alt="Sophia Bennett" class="founder-img mb-3">
+                        <h4 class="h5 mb-0">Sophia Bennett</h4>
+                        <p class="text-muted small">Founder & Instructor</p>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/alisa-morris.jpg" alt="Alisa Morris" class="founder-img mb-3">
+                        <h4 class="h5 mb-0">Alisa Morris</h4>
+                        <p class="text-muted small">Founder & Program Manager</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta" class="py-5 text-center my-5">
+            <div class="container">
+                <h3 class="font-serif fw-normal mb-4 mx-auto" style="max-width: 600px;">Whether you're a beginner looking to explore expressive movement or an advanced dancer ready to refine your technique, we have classes for you!</h3>
+                <a href="#" class="btn-custom">Reserve your spot</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-black text-white py-5 mt-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-md-4 mb-4">
+                    <h2 class="footer-logo">Mov.<br>Stu.</h2>
+                </div>
+                <div class="col-md-2 col-6 mb-4 footer-links">
+                    <h5 class="small text-uppercase text-white-50 mb-3">Email:</h5>
+                    <a href="mailto:hello@figma.com" class="text-white">hello@figma.com</a>
+                </div>
+                <div class="col-md-2 col-6 mb-4 footer-links">
+                    <h5 class="small text-uppercase text-white-50 mb-3">Instagram:</h5>
+                    <a href="#" class="text-white">@figma</a>
+                    <h5 class="small text-uppercase text-white-50 mb-3 mt-4">Facebook:</h5>
+                    <a href="#" class="text-white">figma</a>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="small text-uppercase text-white-50 mb-3">Address:</h5>
+                    <p>224 Candyland Lane, Brooklyn, NY<br>(646) 555-4567</p>
+                </div>
+            </div>
+            
+            <div class="row border-top border-secondary pt-4 text-white-50 small d-flex justify-content-between align-items-center">
+                <div class="col-md-4">
+                    Movement Studios<br>
+                    2025 All Rights Reserved
+                </div>
+                <div class="col-md-8 text-md-end d-flex justify-content-md-end gap-4 mt-3 mt-md-0">
+                    <a href="#" class="text-white-50 text-decoration-none">Our Socials</a>
+                    <a href="#" class="text-white-50 text-decoration-none">Email us</a>
+                    <a href="#" class="text-white-50 text-decoration-none">Book with us</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
